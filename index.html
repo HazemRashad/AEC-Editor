@@ -35,6 +35,72 @@
             align-items: center;
         }
 
+        .info-panel, .guide-panel {
+            position: absolute;
+            top: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .info-panel {
+            right: 20px;
+            min-width: 200px;
+            padding: 12px 20px;
+        }
+
+        .guide-panel {
+            left: 20px;
+            width: 220px;
+            padding: 10px 15px;
+        }
+
+        .guide-panel h3, .info-panel h3 {
+            margin: 0 0 8px 0;
+            color: #2196F3;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .guide-panel ul {
+            margin: 0;
+            padding-left: 15px;
+            list-style-type: none;
+        }
+
+        .guide-panel li {
+            margin: 6px 0;
+            font-size: 13px;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        .guide-panel .key {
+            display: inline-block;
+            padding: 1px 4px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            font-family: monospace;
+            margin: 0 2px;
+            font-size: 11px;
+            border: 1px solid #ddd;
+        }
+
+        .info-panel p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .info-panel .label {
+            font-weight: 600;
+            color: #666;
+        }
+
         .toolbar button {
             padding: 10px 20px;
             border: none;
@@ -54,6 +120,10 @@
         .dimension-label {
             pointer-events: none;
             user-select: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2px 6px;
+            border-radius: 4px;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -63,6 +133,31 @@
         <button id="switch-to-2d">2D View</button>
         <button id="switch-to-3d">3D View</button>
         <button id="zoom-extend">Zoom Extend</button>
+    </div>
+    <div class="info-panel">
+        <h3>Info</h3>
+        <p><span class="label">Total Walls:</span> <span id="total-walls">0</span></p>
+        <p><span class="label">Total Length:</span> <span id="total-length">0.00m</span></p>
+        <p><span class="label">Selected Walls:</span> <span id="selected-walls">0</span></p>
+        <p><span class="label">Selected Walls Length:</span> <span id="selected-length">0.00m</span></p>
+    </div>
+    <div class="guide-panel">
+        <h3>Quick Guide</h3>
+        <ul>
+            <li><span class="key">Left Click</span> on empty space to start drawing a wall</li>
+            <li><span class="key">Left Click</span> again to finish the wall</li>
+            <li><span class="key">Left Click</span> on a wall to select it</li>
+            <li><span class="key">Ctrl + Left Click</span> to select multiple walls</li>
+            <li><span class="key">Right Click</span> on a wall to delete it</li>
+            <li><span class="key">Right Click</span> on a selected wall to delete all selected walls</li>
+            <li><span class="key">Left Click</span> + drag on selected walls to move them</li>
+            <li><span class="key">Shift + Left Click</span> + drag to pan the view</li>
+            <li><span class="key">Middle Mouse</span> + drag to pan the view</li>
+            <li><span class="key">Mouse Wheel</span> to zoom in/out</li>
+            <li><span class="key">Left Click</span> on empty space to clear selection</li>
+            <li>Use the toolbar buttons to switch between 2D/3D views</li>
+            <li>Use <span class="key">Zoom Extend</span> to fit all walls in view</li>
+        </ul>
     </div>
     <script type="module" src="/src/main.ts"></script>
 </body>
