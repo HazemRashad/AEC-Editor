@@ -436,7 +436,8 @@ export class Viewer{
         // Check if the click is on a button, toolbar, or any of the panels
         if ((e.target as HTMLElement).closest('.toolbar') ||
             (e.target as HTMLElement).closest('.info-panel') ||
-            (e.target as HTMLElement).closest('.guide-panel')) {
+            (e.target as HTMLElement).closest('.guide-panel') ||
+            (e.target as HTMLElement).closest('.copyright-panel')) {
             return;
         }
 

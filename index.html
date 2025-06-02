@@ -37,6 +37,7 @@
 
         .info-panel, .guide-panel, .copyright-panel {
             position: absolute;
+            top: 20px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -46,23 +47,22 @@
         }
 
         .info-panel {
-            top: 20px;
             right: 20px;
             min-width: 200px;
             padding: 12px 20px;
         }
 
         .guide-panel {
-            top: 20px;
             left: 20px;
             width: 220px;
             padding: 10px 15px;
         }
 
         .copyright-panel {
-            bottom: 80px;
+            bottom: 20px;
             right: 20px;
-            padding: 10px 15px;
+            padding: 12px 20px;
+            top: auto;
         }
 
         .guide-panel h3, .info-panel h3, .copyright-panel h3 {
@@ -132,21 +132,6 @@
             border-radius: 4px;
             z-index: 1000;
         }
-
-        .copyright-panel p {
-            margin: 5px 0;
-            font-size: 13px;
-            line-height: 1.3;
-        }
-
-        .copyright-panel a {
-            color: #2196F3;
-            text-decoration: none;
-        }
-
-        .copyright-panel a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
@@ -164,9 +149,9 @@
         <p><span class="label">Selected Walls Length:</span> <span id="selected-length">0.00m</span></p>
     </div>
     <div class="copyright-panel">
-        <h3>Credits</h3>
-        <p>Created by <a href="https://github.com/HazemRashad" target="_blank">Hazem Rashad</a></p>
-        <p>© 2025 All rights reserved</p>
+        <h3>Copyrights</h3>
+        <p>© 2025 AEC Editor. All rights reserved.</p>
+        <p>Developed by <a href="https://github.com/HazemRashad" target="_blank">Hazem Rashad</a></p>
         <p>Intake 45, AEC Informatics ITI, 2025</p>
     </div>
     <div class="guide-panel">
@@ -188,7 +173,6 @@
             
             <li><b>Navigation</b></li>
             <li><span class="key">Mouse Wheel</span> zoom in/out</li>
-            <li><span class="key">Shift + Left Drag</span> pan view</li>
             <li><span class="key">Middle Mouse Drag</span> pan view</li>
             
             <li><b>3D Controls</b></li>
